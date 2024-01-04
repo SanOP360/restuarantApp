@@ -27,5 +27,8 @@
     height:100%;
     object-fit: cover;
     transform:rotateZ(-5deg) translateY(-4rem) translateZ(-2rem);
+    z-index: 2;
 }
+
+
 
