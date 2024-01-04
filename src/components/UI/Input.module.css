@@ -1,0 +1,18 @@
+.input{
+    width:auto;
+    margin:0.2rem ;
+    display: flex;
+}
+
+input{
+    width: 3rem;
+    align-items: center;
+
+}
+
+label{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color:black;
+    margin: 0.2rem;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./AvailableMeals.module.css";
 import Card from "../UI/Card";
-
+import MealForm from "./MealForm";
 const DummyMeals = [
   {
     id: "m1",
@@ -56,9 +56,14 @@ const DummyMeals = [
 const AvailableMeals = () => {
   const mealsList = DummyMeals.map((meal) => (
     <li className={classes.mealList} key={meal.id}>
-      <span className={classes.mealName}>{meal.name}</span>
-      <span className={classes.mealDesc}>{meal.description}</span>
-      <span className={classes.mealPrice}>{meal.price}</span>
+      <div className={classes.list}>
+        <span className={classes.mealName}>{meal.name}</span>
+        <span className={classes.mealDesc}>{meal.description}</span>
+        <span className={classes.mealPrice}> {meal.price} Rs</span>
+      </div>
+      
+        <MealForm></MealForm>
+      
     </li>
   ));
 

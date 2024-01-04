@@ -1,4 +1,4 @@
-.button{
+.Button{
     display: flex;
     align-items: center;
     font-size: 1.5rem;
@@ -8,6 +8,7 @@
     border-radius: 20%;
     background-color: rgb(192, 181, 181);
     box-shadow:0 2px 8px rgb(53, 49, 4,34);
+    cursor: pointer;
 
 }
 
