@@ -5,8 +5,8 @@
     width:1auto;
     height:auto;
     padding:8px;
-    border-radius: 20%;
-    background-color: rgb(192, 181, 181);
+    border-radius: 14px;
+    background-color:rgb(241, 240, 240);
     box-shadow:0 2px 8px rgb(53, 49, 4,34);
     cursor: pointer;
 
@@ -18,11 +18,12 @@
 .badge{
 
     width: 2rem;
-    border-radius: 5px;
+    border-radius: 10px;
     margin:0 1vw 0 1vw;
     font-weight: bold;
     background-color:rgb(130, 45, 24); ;
-    color:white
+    color:white;
+    padding:3px
     
     
 }

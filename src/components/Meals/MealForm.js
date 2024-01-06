@@ -4,12 +4,22 @@ import classes from './MealForm.module.css';
 import Input from '../UI/Input';
 
 const MealForm = () => {
-  const [initialVal, setInitialVal] = useState('1');
-
-  const addMealHandler = () => {
-    setInitialVal()
-  };
-
+   const [inputVal, setInputVal] = useState('1');
+   const handleInputChange = (event) => {
+    const newVal=event.target.value;
+    
+      setInputVal(newVal);
+    
+     
+   };
+ 
+  const addHandler=()=>{
+    if(inputVal<5){
+      setInputVal(String(Number(inputVal) + 1));
+    }
+    
+  }
+  
   return (
     <form className={classes.form}>
       <Input
@@ -20,11 +30,13 @@ const MealForm = () => {
           min: '1',
           max: '5',
           step: '1',
-          defaultValue: initialVal,
+          value:inputVal,
+          onchange:handleInputChange
+          
         }}
       />
 
-      <button className={classes.addBtn} type="button" onClick={addMealHandler}>
+      <button className={classes.addBtn} type="button" onClick={addHandler} >
         + Add
       </button>
     </form>
