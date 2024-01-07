@@ -8,17 +8,29 @@ const CartProvider = (props) => {
     let foundItem = items.find((newItem) => newItem.name === item.name);
 
     if (foundItem === undefined) {
-      
       updateItems([...items, { ...item, quantity: Number(item.quantity) }]);
     } else {
-      
       foundItem.quantity += Number(item.quantity);
       updateItems([...items]);
     }
   };
 
-  const removeItemHandler = (id) => {
-    
+  const removeItemHandler = (item) => {
+    const updatedItems = [...items];
+
+    const foundItemIndex = updatedItems.findIndex(
+      (newItem) => newItem.name === item.name
+    );
+
+    if (foundItemIndex !== -1) {
+      if (updatedItems[foundItemIndex].quantity > 1) {
+        updatedItems[foundItemIndex].quantity -= 1;
+      } else {
+        updatedItems.splice(foundItemIndex, 1);
+      }
+
+      updateItems(updatedItems);
+    }
   };
 
   const cartContext = {

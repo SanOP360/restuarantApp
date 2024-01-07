@@ -39,3 +39,10 @@
   font-weight: bold;
   margin: 0.2rem;
 }
+
+
+@media (max-width:600px){
+  .meals{
+    width: 100%;
+  }
+}
