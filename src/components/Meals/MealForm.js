@@ -1,42 +1,37 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import classes from './MealForm.module.css';
 
 import Input from '../UI/Input';
+import CartContext from '../../store/CartContext';
+const MealForm = (props) => {
+  const cartCtx = useContext(CartContext);
+  const quantity = document.getElementById("amount" + props.id)?.value;
+  const addItemHandler = (event) => {
 
-const MealForm = () => {
-   const [inputVal, setInputVal] = useState('1');
-   const handleInputChange = (event) => {
-    const newVal=event.target.value;
-    
-      setInputVal(newVal);
-    
-     
-   };
- 
-  const addHandler=()=>{
-    if(inputVal<5){
-      setInputVal(String(Number(inputVal) + 1));
+
+    if (!isNaN(quantity) && quantity > 0) {
+      
+      cartCtx.addItem({ ...props.item, quantity: quantity });
     }
+    // Inside the addItemCartHandler function
     
-  }
-  
+  };
+
   return (
     <form className={classes.form}>
       <Input
         label="Amount"
         input={{
-          id: 'amount',
-          type: 'number',
-          min: '1',
-          max: '5',
-          step: '1',
-          value:inputVal,
-          onchange:handleInputChange
-          
+          id: "amount" + props.id,
+          type: "number",
+          min: "1",
+          max: "5",
+          step: "1",
+          defaultValue: "1",
         }}
       />
 
-      <button className={classes.addBtn} type="button" onClick={addHandler} >
+      <button className={classes.addBtn} onClick={addItemHandler} type="button">
         + Add
       </button>
     </form>

@@ -3,7 +3,10 @@
     margin:0;
     padding: 0;
 }
-
+.cart-item li{
+    font-size: 2rem;
+    
+}
 .total{
     display:flex;
     justify-content: space-between;
@@ -43,3 +46,5 @@
     background-color: rgb(176, 172, 172);
 
 }
+
+

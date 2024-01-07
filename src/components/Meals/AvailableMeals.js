@@ -53,7 +53,7 @@ const DummyMeals = [
   },
 ];
 
-const AvailableMeals = () => {
+const AvailableMeals = (props) => {
   const mealsList = DummyMeals.map((meal) => (
     <li className={classes.mealList} key={meal.id}>
       <div className={classes.list}>
@@ -62,7 +62,7 @@ const AvailableMeals = () => {
         <span className={classes.mealPrice}> {meal.price} Rs</span>
       </div>
       
-        <MealForm></MealForm>
+        <MealForm id={meal.id} item={meal} ></MealForm>
       
     </li>
   ));
