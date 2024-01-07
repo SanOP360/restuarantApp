@@ -3,8 +3,24 @@
     margin:0;
     padding: 0;
 }
+.cart-item ul{
+    border-radius: 14px;
+}
 .cart-item li{
-    font-size: 2rem;
+    display: flex;
+    
+    border-radius: 14px;
+    padding:5px;
+    font-weight: bold;
+    
+}
+.cart-item li span{
+    font-size: 1rem;
+    margin: 0 2rem;
+    flex:1;
+    /* border:1px solid black; */
+    align-items: center;
+    /* background-color: aqua; */
     
 }
 .total{

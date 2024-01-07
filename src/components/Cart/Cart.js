@@ -17,6 +17,12 @@ const Cart = (props) => {
       ))}
     </ul>
   );
+  let sum=0;
+  cartCtx.items.forEach(item => {
+    sum=sum+(item.price)*item.quantity;
+  });
+
+
 
   return (
     <Modal onClose={props.onClose}>
@@ -24,7 +30,7 @@ const Cart = (props) => {
 
       <div className={classes.total}>
         <span>Total Amount</span>
-        <span>344</span>
+        <span>{sum}</span>
       </div>
       <div className={classes.actions}>
         <button className={classes["button-alt"]} onClick={props.onClose}>
