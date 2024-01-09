@@ -19,7 +19,7 @@ const Cart = (props) => {
           <span>x {item.quantity}</span>
           <span>
             <button onClick={() => itemRemoveHandler(item)}>Remove</button>
-          </span>
+          </span>          
         </li>
       ))}
     </ul>
@@ -36,7 +36,7 @@ const Cart = (props) => {
 
       <div className={classes.total}>
         <span>Total Amount</span>
-        <span>{sum}</span>
+        <span>Rs {sum}</span>
       </div>
       <div className={classes.actions}>
         <button className={classes["button-alt"]} onClick={props.onClose}>

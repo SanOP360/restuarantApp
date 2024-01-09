@@ -32,18 +32,23 @@
     background-color:red;
     border-radius: 5px;
     align-items: center;
+    box-shadow: 0 3px 5px rgba(107, 106, 106,45);
+    border: 1px solid black;
 }
 .cart-item>li>span>button:hover{
     background-color:rgb(216, 32, 32);
     color:white;
+    border:1px solid red;
 }
 .total{
     display:flex;
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
-    font-size: 1.5rem;
-    margin:1rem 0;
+    font-size: 2rem;
+    margin:1rem 2rem;
+    
+
 }
 
 .actions{
@@ -58,10 +63,15 @@
     color:white;
     cursor:pointer;
     font-weight: bold;
+    box-shadow: 0 3px 5px rgba(107, 106, 106,45);
+    border:1px solid black;
+    border-radius: 5px;
+
 }
 .button-alt:hover{
     color:whitesmoke;
     background-color: rgb(86, 22, 22);
+    
 }
 
 .orderBtn{
@@ -72,6 +82,10 @@
     color:black;
     cursor:pointer;
     font-weight: bold;
+    box-shadow: 0 3px 5px rgba(107, 106, 106,45);
+    border:1px solid black;
+    border-radius: 5px;
+
 }
 
 .orderBtn:hover{
